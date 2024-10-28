@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;  
+  text-align: left;
+  padding-left: 20rem;
+}
+
+h1{
+  font-size: 35px;
+}
+
+.filter-button{
+  border: 1px solid black;
+  background-color: ;
+}
+
+
+.read-the-docs {
+  color: #888;
+}

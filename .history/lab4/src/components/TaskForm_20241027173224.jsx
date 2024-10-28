@@ -1,0 +1,20 @@
+import { useState } from "react"
+
+function TaskForm({ setTasks }) {
+    const [currentTask, setCurrentTask] = useState()
+    const save = () => {
+        setTasks((currentTasks) => { // trick to get current state
+            const tmpTasks = [...currentTasks] // deep copy (tmpTasks is just a copy of currentTasks cause you cant just copy an array)
+            tmpTasks.push(currentTask)
+            return tmpTasks
+        })
+    }
+    // the onChange is a function that runs everytime the input text changes
+    // everytime the input text changes update the state with the value of the text input
+    return <div>
+        <input type="text" onChange={(e) => setCurrentTask(e.target.value)} placeholder="Enter task here..."/>
+        <button onClick={() => save()}>Save</button>
+    </div>
+}
+
+export default TaskForm
